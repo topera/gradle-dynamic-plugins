@@ -1,7 +1,6 @@
 # Topera's Hello World #019
 ## Reusing classes in Gradle files
-This hello world shows how to reuse vars (global vars) and classes in Gradle files
-We'll show how to unit test your classes used in Gradle files
+This hello world shows how to reuse vars (global vars) and classes in Gradle files.
 
 ## How to download this source code
 * Install [Gradle](https://gradle.org/install)
@@ -9,10 +8,10 @@ We'll show how to unit test your classes used in Gradle files
 * In IntelliJ IDEA: File → New → Project From Version Control → Git → put the url of this repository
 
 ## How to test
-* $ gradle hello
+* Run `$ gradle hello`
 
 ## Explanation
-* TODO
+* We can split the main build.gradle file using a second file like `mySecondFile.gradle`, using the `apply from` command
 
 ## Tech Stack
 * Intellij IDEA 2018.1
