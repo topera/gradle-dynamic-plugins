@@ -27,13 +27,12 @@ This hello world shows how to reuse vars (global vars) and classes in Gradle fil
     </pre>
 * There are 2 diff steps in Gradle. One for configuration, ran all the time: 'Configuring task red', 'Configuring task blue'. And another for the specific task called, in this case, red.
 
+## Folder Structure
+![folder-structure](./doc/files.png)
 
 ## Tech Stack
 * Intellij IDEA 2018.1
 * Gradle 4.8
-
-## Folder Structure
-![folder-structure](./doc/files.png)
 
 To take a look in other projects, please see https://github.com/topera/index
 
