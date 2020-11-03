@@ -1,3 +1,7 @@
-// tested with gradle 4.8
-ext.logPrefix = "[COLORS]"
-apply from: 'mySecondFile.gradle'
+List<String> tasks = gradle.startParameter.taskRequests.args[0]
+
+apply from: 'build-java.gradle'
+
+if (tasks?.contains('war')) {
+    apply from: 'build-extra.gradle'
+}

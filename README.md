@@ -1,6 +1,6 @@
-# Topera's Hello World #019
-## Reusing classes in Gradle files
-This hello world shows how to reuse vars (global vars) and classes in Gradle files.
+# Topera's Hello World #026
+## Conditional plugins
+This hello world shows how to apply some plugins according to the specified task
 
 ## How to download this source code
 * Install [Gradle](https://gradle.org/install)
@@ -8,32 +8,16 @@ This hello world shows how to reuse vars (global vars) and classes in Gradle fil
 * In IntelliJ IDEA: File → New → Project From Version Control → Git → put the url of this repository
 
 ## How to test
-* Run `$ gradle showRed`
 
-## Explanation
-* We can split the main build.gradle file using a second file, like `mySecondFile.gradle`, using the `apply from` command
-* We created a global variable using the variable `ext.` in `build.gradle` file
-* File `mySecondFile.gradle` defines 2 custom tasks: showRed and showBlue.
-    * Both are of type `ShowColor`, a custom class created by us in folder `buildSrc/src/main/groovy/com/topera/gradle/ShowColor.groovy`
-* When we run `showRed` the log displays:
-    <pre>
-    > Configure project :
-    [COLORS] Configuring task red
-    [COLORS] Configuring task blue
+* Run `$ ./gradlew war`
 
-    > Task :showRed
-    [COLORS] Running task red
-    My color is red
-    </pre>
-* There are 2 diff steps in Gradle. One for configuration, ran all the time: 'Configuring task red', 'Configuring task blue'. And another for the specific task called, in this case, red.
+Works because we apply the plugin in case of this task.
 
-## Folder Structure
-![folder-structure](./doc/files.png)
+* Run `$ ./gradlew compileGroovy`
 
-## Tech Stack
-* Intellij IDEA 2018.1
-* Gradle 4.8
+Doesn't work because this task is not on condition of build.gradle.
 
+---
 To take a look in other projects, please see https://github.com/topera/index
 
 
